@@ -1,0 +1,102 @@
+\usepackage{fontspec}
+\setmainfont{CMU Serif}
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKmonofont{SimSun} 
+
+\usepackage{microtype}
+\usepackage{dsfont}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage[affil-it]{authblk}
+\usepackage[backref,colorlinks,citecolor=blue,bookmarks=true]{hyperref}
+\usepackage{nag}
+\usepackage{xspace}
+\usepackage{stackengine}
+
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage[capitalize]{cleveref}
+\usepackage{bm, bbm}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage[shortlabels]{enumitem}
+\usepackage{complexity}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{bookmark}
+
+%   Styles
+
+\setlength{\textwidth}{6.3in}
+\setlength{\textheight}{8.7in}
+\setlength{\topmargin}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+
+
+%   Theorems
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem*{exercise*}{Exercise}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+
+% macro
+
+\newcommand*{\Q}{{\mathds{Q}}}
+\newcommand*{\N}{{\mathds{N}}}
+\newcommand*{\Z}{{\mathds{Z}}}
+\let\R\relax
+\newcommand*{\R}{{\mathds{R}}}
+\newcommand*{\F}{{\mathds{F}}}
+\let\C\relax
+\newcommand*{\C}{{\mathds{C}}}
+\newcommand*{\indicator}{{\mathds{1}}}
+
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+\let\Ex\relax
+\DeclareMathOperator*{\Ex}{\mathbb{E}}
+\DeclareMathOperator*{\Var}{Var}
+
+
+\newcommand{\abs}[1]{\left\vert {#1} \right\vert}
+\newcommand{\norm}[1]{\left\Vert {#1} \right\Vert}
+% znotes
+\newcommand{\znote}[1]{\textcolor{cyan}{\small {\textbf{(Zhihan:} #1\textbf{) }}}}
+% auto line break inside tabular cells
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\algrenewcommand\textproc{}
+\newcommand{\etal}{\textit{et al.}}
+% subalign in summation conditions
+\makeatletter
+\newcommand{\subalign}[1]{%
+  \vcenter{%
+    \Let@ \restore@math@cr \default@tag
+    \baselineskip\fontdimen10 \scriptfont\tw@
+    \advance\baselineskip\fontdimen12 \scriptfont\tw@
+    \lineskip\thr@@\fontdimen8 \scriptfont\thr@@
+    \lineskiplimit\lineskip
+    \ialign{\hfil$\m@th\scriptstyle##$&$\m@th\scriptstyle{}##$\hfil\crcr
+      #1\crcr
+    }%
+  }%
+}
+\makeatother
